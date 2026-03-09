@@ -5,6 +5,7 @@ function renderNav(activePage) {
     { id: 'online', label: 'Online Coaching', href: 'online-coaching.html' },
     { id: 'inperson', label: 'In-Person', href: 'in-person.html' },
     { id: 'nicole', label: 'Treat & Train', href: 'treat-and-train.html' },
+    { id: 'collective', label: 'The Collective', href: 'collective.html' },
     { id: 'about', label: 'About', href: 'about.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
   ];
@@ -43,6 +44,7 @@ function renderFooter(el) {
             <li><a href="in-person.html">In-Person</a></li>
             <li><a href="in-person.html">Hybrid</a></li>
             <li><a href="treat-and-train.html">Treat &amp; Train</a></li>
+            <li><a href="collective.html">The Collective</a></li>
           </ul>
         </div>
         <div class="foot-col">
