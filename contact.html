@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ground Zero Strength | Twin Falls, Idaho</title>
+<meta name="description" content="Apply for online coaching, book a free consultation, or inquire about in-person training at Ground Zero Strength in Twin Falls, Idaho.">
+<meta name="keywords" content="contact Ground Zero Strength, apply for coaching, book consultation Twin Falls, Sam Krapf contact">
+<meta property="og:title" content="Contact — Ground Zero Strength">
+<meta property="og:url" content="https://groundzerostrength.com/contact.html">
+<link rel="canonical" href="https://groundzerostrength.com/contact.html">
+<link rel="stylesheet" href="shared.css">
+<style>
+.contact-g { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 96px 0; align-items: start; }
+.ci { margin-bottom: 36px; }
+.ci h4 { font-size: 10px; letter-spacing: 0.16em; color: var(--accent); margin-bottom: 5px; font-family: var(--mono); }
+.ci p, .ci a { font-size: 15px; color: rgba(255,255,255,0.65); text-decoration: none; }
+.ci a:hover { color: var(--accent); }
+.note-box { margin-top: 40px; padding: 28px; background: rgba(255,255,255,0.04); border-left: 3px solid var(--accent); }
+.note-box h4 { margin-bottom: 6px; }
+.note-box p { font-size: 13px; color: rgba(255,255,255,0.5); }
+.form { display: flex; flex-direction: column; gap: 18px; }
+.fg { display: flex; flex-direction: column; gap: 6px; }
+.fg label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-family: var(--mono); font-weight: 400; }
+.fg input, .fg textarea, .fg select {
+  padding: 13px 15px; border: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--sans); font-size: 15px; font-weight: 400;
+  background: rgba(255,255,255,0.05); color: var(--white);
+  outline: none; transition: border-color 0.2s;
+  -webkit-appearance: none; border-radius: 0;
+}
+.fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,0.25); }
+.fg select option { background: #1a1a1a; color: var(--white); }
+.fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--accent); }
+.fg textarea { resize: vertical; min-height: 130px; }
+.fr { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.f-success { display: none; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 18px 20px; font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 8px; }
+@media (max-width: 900px) {
+  .contact-g { grid-template-columns: 1fr; padding: 64px 0; }
+  .fr { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav id="mainNav"></nav>
+<div class="mob-menu" id="mobMenu"></div>
+<div class="pt">
+
+  <div class="pg-hero">
+    <div class="wrap">
+      <span class="eyebrow">Get Started</span>
+      <h1>Let's talk.</h1>
+      <div class="rule"></div>
+      <p class="lg" style="max-width:480px;">Whether you're ready to apply or just have questions — reach out. Sam responds within 24 hours.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="contact-g">
+      <div>
+        <h2>Ground Zero<br>Strength</h2>
+        <div class="rule"></div>
+        <div class="ci"><h4>Location</h4><p>647 Filer Avenue<br>Twin Falls, Idaho 83301</p></div>
+        <div class="ci"><h4>Email</h4><a href="mailto:sam@gzstrength.com">sam@gzstrength.com</a></div>
+        <div class="ci"><h4>Online Coaching Portal</h4><a href="https://online.gzstrength.com" target="_blank">online.gzstrength.com</a></div>
+        <div class="ci"><h4>Free Guides</h4><a href="https://links.gzstrength.com" target="_blank">links.gzstrength.com</a></div>
+        <div class="ci"><h4>Follow</h4><a href="https://x.com/gzstrength" target="_blank">X / Twitter — @gzstrength</a></div>
+        <div class="note-box">
+          <h4>Response Time</h4>
+          <p>Sam responds to all inquiries within 24 hours. For urgent matters, reach out on X.</p>
+        </div>
+      </div>
+      <div>
+        <div id="fSuccess" class="f-success"><strong>Message sent.</strong> Sam will be in touch within 24 hours.</div>
+        <form class="form" id="contactForm" name="contact" method="POST" data-netlify="true" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="form-name" value="contact">
+          <div class="fr">
+            <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
+            <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith"></div>
+          </div>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="john@email.com" required></div>
+          <div class="fg">
+            <label>I'm interested in</label>
+            <select name="interest">
+              <option value="">Select an option</option>
+              <option>Online Coaching ($315/month)</option>
+              <option>Hybrid Coaching + Gym Access ($340/month)</option>
+              <option>Treat &amp; Train with Nicole Sharp, PT</option>
+              <option>Open Access Membership ($100/month)</option>
+              <option>BJJ / Partner Access</option>
+              <option>General Question</option>
+            </select>
+          </div>
+          <div class="fg"><label>Training Background &amp; Goals</label><textarea name="message" placeholder="Where are you at with training? What are you working toward?"></textarea></div>
+          <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer id="mainFooter"></footer>
+</div>
+<script src="shared.js"></script>
+<script>
+renderNav('contact');
+renderFooter(document.getElementById('mainFooter'));
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('contactForm');
+  fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(new FormData(form)).toString() })
+    .then(() => { document.getElementById('fSuccess').style.display = 'block'; form.style.opacity = '0.35'; form.style.pointerEvents = 'none'; })
+    .catch(() => { form.submit(); });
+}
+</script>
+</body>
+</html>
