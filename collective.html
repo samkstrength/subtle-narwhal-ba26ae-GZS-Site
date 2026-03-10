@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Collective — Ground Zero Strength | Twin Falls, Idaho</title>
+<meta name="description" content="The GZS Coaching Collective brings together strength, rehab, and performance coaches under one roof in Twin Falls, Idaho.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #0a0a0a; --off-black: #111111; --dark: #1a1a1a;
+  --off-white: #e8e8e8; --white: #f5f5f5; --accent: #d94f2b;
+  --display: 'Bebas Neue', Impact, sans-serif;
+  --mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--black); color: var(--off-white); line-height: 1.65; font-weight: 400; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; background: rgba(10,10,10,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06); transition: box-shadow 0.3s; }
+.nav-logo { font-family: var(--display); font-size: 22px; letter-spacing: 0.06em; color: var(--white); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 24px; list-style: none; }
+.nav-links a { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: lowercase; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; padding-bottom: 3px; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a.active { color: var(--white); border-bottom-color: var(--accent); }
+.nav-cta { background: var(--accent); color: var(--white); padding: 10px 22px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: lowercase; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: #c0431f; }
+.mob-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+.mob-toggle span { display: block; width: 22px; height: 1.5px; background: var(--white); }
+.mob-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; bottom: 0; background: var(--black); z-index: 199; padding: 40px 28px; flex-direction: column; overflow-y: auto; }
+.mob-menu.open { display: flex; }
+.mob-menu a { font-family: var(--display); font-size: 36px; letter-spacing: 0.04em; color: var(--white); text-decoration: none; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+/* UTILS */
+.pt { padding-top: 68px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
+section { padding: 96px 0; }
+.eyebrow { font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; display: block; }
+h2 { font-family: var(--display); font-size: clamp(38px, 5vw, 68px); font-weight: 400; line-height: 1.0; letter-spacing: 0.02em; color: var(--white); }
+h4 { font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: 0.16em; color: rgba(255,255,255,0.5); text-transform: uppercase; }
+p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.65); font-weight: 400; }
+.rule { width: 36px; height: 1px; background: var(--accent); margin: 22px 0; }
+.btn { display: inline-block; padding: 13px 30px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: lowercase; cursor: pointer; text-decoration: none; transition: all 0.22s; border: none; }
+.btn-accent { background: var(--accent); color: var(--white); }
+.btn-accent:hover { background: #c0431f; }
+
+/* HERO */
+.collective-hero { min-height: 72vh; display: flex; align-items: flex-end; padding: 140px 0 80px; position: relative; overflow: hidden; background: var(--off-black); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.collective-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 80px); pointer-events: none; }
+.hero-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 20px; }
+.hero-title { font-family: var(--display); font-size: clamp(72px, 10vw, 140px); line-height: 0.9; letter-spacing: 0.02em; color: var(--white); margin-bottom: 32px; }
+.hero-title span { color: var(--accent); }
+.hero-sub { font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.55); max-width: 520px; font-weight: 300; }
+.hero-accent-block { position: absolute; right: 0; top: 0; bottom: 0; width: 38%; background: linear-gradient(135deg, transparent 0%, rgba(217,79,43,0.05) 100%); pointer-events: none; }
+
+/* WHAT */
+.what-section { background: var(--black); padding: 96px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; }
+.what-content p { margin-bottom: 16px; }
+.what-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(255,255,255,0.05); }
+.stat-box { background: var(--off-black); padding: 36px 32px; }
+.stat-num { font-family: var(--display); font-size: 52px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+
+/* COACHES */
+.coaches-section { background: var(--off-black); padding: 96px 0; }
+.section-header { margin-bottom: 64px; }
+.coaches-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.coach-card { background: var(--black); border: 1px solid rgba(255,255,255,0.06); overflow: hidden; transition: border-color 0.3s; }
+.coach-card:hover { border-color: rgba(217,79,43,0.4); }
+.coach-img-wrap { position: relative; height: 300px; overflow: hidden; background: var(--dark); }
+.coach-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: grayscale(15%); transition: transform 0.5s ease, filter 0.3s; }
+.coach-card:hover .coach-img-wrap img { transform: scale(1.04); filter: grayscale(0%); }
+.coach-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--dark); }
+.coach-img-placeholder span { font-family: var(--display); font-size: 72px; color: rgba(255,255,255,0.07); letter-spacing: 0.05em; }
+.coach-tag { position: absolute; top: 16px; left: 16px; background: var(--accent); color: var(--white); font-family: var(--mono); font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; padding: 5px 10px; }
+.coach-body { padding: 32px; }
+.coach-name { font-family: var(--display); font-size: 34px; color: var(--white); letter-spacing: 0.03em; margin-bottom: 4px; }
+.coach-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+.coach-bio { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+.coach-creds { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.cred { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
+.coach-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: lowercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(217,79,43,0.3); padding-bottom: 2px; transition: border-color 0.2s; display: inline-block; }
+.coach-link:hover { border-color: var(--accent); }
+
+/* JOIN */
+.join-section { background: var(--black); padding: 96px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+.join-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.join-content p { margin-bottom: 16px; }
+.join-content .btn { margin-top: 16px; }
+.join-perks { display: flex; flex-direction: column; gap: 2px; }
+.perk-row { display: flex; gap: 20px; align-items: flex-start; background: var(--off-black); padding: 24px 28px; border-left: 2px solid transparent; transition: border-color 0.2s; }
+.perk-row:hover { border-left-color: var(--accent); }
+.perk-num { font-family: var(--display); font-size: 28px; color: var(--accent); opacity: 0.5; line-height: 1; flex-shrink: 0; width: 32px; }
+.perk-text h4 { color: var(--off-white); margin-bottom: 6px; }
+.perk-text p { font-size: 13px; color: rgba(255,255,255,0.4); margin: 0; }
+
+/* FOOTER */
+footer { background: var(--off-black); color: rgba(255,255,255,0.7); padding: 60px 0 36px; border-top: 1px solid rgba(255,255,255,0.06); }
+.foot-g { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 44px; }
+.foot-logo { font-family: var(--display); font-size: 22px; letter-spacing: 0.06em; color: var(--white); margin-bottom: 14px; display: block; text-decoration: none; }
+.foot-logo span { color: var(--accent); }
+.foot-tag { font-size: 13px; line-height: 1.7; max-width: 260px; color: rgba(255,255,255,0.45); }
+.foot-col h4 { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.foot-col ul a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+.foot-col ul a:hover { color: var(--white); }
+.foot-bot { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; justify-content: space-between; }
+.foot-bot p { font-family: var(--mono); font-size: 10px; color: rgba(255,255,255,0.25); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 0 22px; }
+  .nav-links, .nav-cta { display: none; }
+  .mob-toggle { display: flex; }
+  .wrap { padding: 0 22px; }
+  .what-grid, .join-inner { grid-template-columns: 1fr; gap: 48px; }
+  .coaches-grid { grid-template-columns: 1fr 1fr; }
+  .foot-g { grid-template-columns: 1fr; gap: 36px; }
+  section { padding: 64px 0; }
+  .hero-accent-block { display: none; }
+}
+@media (max-width: 580px) {
+  .coaches-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a class="nav-logo" href="index.html">Ground <span>Zero</span> Strength</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="online-coaching.html">Online Coaching</a></li>
+    <li><a href="in-person.html">In-Person</a></li>
+    <li><a href="treat-and-train.html">Treat &amp; Train</a></li>
+    <li><a href="collective.html" class="active">The Collective</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Get Started</a>
+  <button class="mob-toggle" onclick="document.getElementById('mobMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mobMenu" class="mob-menu">
+  <a href="index.html">Home</a>
+  <a href="online-coaching.html">Online Coaching</a>
+  <a href="in-person.html">In-Person</a>
+  <a href="treat-and-train.html">Treat &amp; Train</a>
+  <a href="collective.html">The Collective</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="pt">
+
+  <section class="collective-hero">
+    <div class="hero-accent-block"></div>
+    <div class="wrap">
+      <span class="hero-label">Ground Zero Strength</span>
+      <h1 class="hero-title" style="font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(72px,10vw,140px);line-height:0.9;letter-spacing:0.02em;color:#f5f5f5;margin-bottom:32px;">The<br><span style="color:#d94f2b;">Collective</span></h1>
+      <p class="hero-sub">Strength, rehab, and performance coaching under one roof. Three specialists. One facility. Twin Falls, Idaho.</p>
+    </div>
+  </section>
+
+  <section class="what-section">
+    <div class="wrap">
+      <div class="what-grid">
+        <div class="what-content">
+          <span class="eyebrow">What is it</span>
+          <h2>A Different Kind of Gym</h2>
+          <div class="rule"></div>
+          <p>The GZS Coaching Collective isn't a box gym with rotating staff. It's a small group of independent coaches who share a facility, a philosophy, and a referral network — each running their own practice, each committed to getting you stronger and healthier.</p>
+          <p>Whether you need barbell coaching, physical therapy, or both, you'll find it here. And because we work together, nothing falls through the cracks.</p>
+        </div>
+        <div class="what-stats">
+          <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Specialists on staff</div></div>
+          <div class="stat-box"><div class="stat-num">1</div><div class="stat-label">Shared facility</div></div>
+          <div class="stat-box"><div class="stat-num">SS</div><div class="stat-label">Starting Strength affiliate</div></div>
+          <div class="stat-box"><div class="stat-num">TF</div><div class="stat-label">Twin Falls, Idaho</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coaches-section">
+    <div class="wrap">
+      <div class="section-header">
+        <span class="eyebrow">The team</span>
+        <h2>Meet the Coaches</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="coaches-grid">
+
+        <div class="coach-card">
+          <div class="coach-img-wrap">
+            <img src="sam.jpg" alt="Sam Krapf — Ground Zero Strength">
+            <span class="coach-tag">Founder</span>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Sam Krapf</div>
+            <div class="coach-title">Starting Strength Coach</div>
+            <p class="coach-bio">Sam is a certified Starting Strength Coach and the founder of Ground Zero Strength. He coaches barbell training for lifters who want real-world strength — for hunting, martial arts, and living better. He also coaches online, working with clients across the country.</p>
+            <div class="coach-creds">
+              <span class="cred">SSC Certified</span>
+              <span class="cred">Online Coaching</span>
+              <span class="cred">In-Person</span>
+              <span class="cred">Hybrid</span>
+            </div>
+            <a href="online-coaching.html" class="coach-link">View coaching options →</a>
+          </div>
+        </div>
+
+        <div class="coach-card">
+          <div class="coach-img-wrap">
+            <div class="coach-img-placeholder"><span>AC</span></div>
+            <span class="coach-tag">Collective Coach</span>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Ashley</div>
+            <div class="coach-title">Strength Coach</div>
+            <p class="coach-bio">Ashley holds a Master's in Strength &amp; Conditioning from the College of Idaho and spent time on the strength coaching staff at the University of Idaho. She coaches out of the GZS facility, runs a Women's Strength group, and works with clients at all levels building real, lasting strength on the barbell.</p>
+            <div class="coach-creds">
+              <span class="cred">M.S. Strength &amp; Conditioning</span>
+              <span class="cred">Women's Strength</span>
+              <span class="cred">In-Person Coaching</span>
+            </div>
+            <a href="contact.html" class="coach-link">Get in touch →</a>
+          </div>
+        </div>
+
+        <div class="coach-card">
+          <div class="coach-img-wrap">
+            <img src="nicole.jpg" alt="Nicole Sharp — Treat & Train">
+            <span class="coach-tag">Treat &amp; Train</span>
+          </div>
+          <div class="coach-body">
+            <div class="coach-name">Nicole Sharp</div>
+            <div class="coach-title">Physical Therapist</div>
+            <p class="coach-bio">Nicole runs Treat &amp; Train out of the GZS facility, combining physical therapy and strength training into a seamless process. If you're dealing with pain, recovering from injury, or want to train smarter, Nicole bridges the gap between PT and the barbell.</p>
+            <div class="coach-creds">
+              <span class="cred">Physical Therapy</span>
+              <span class="cred">Injury Rehab</span>
+              <span class="cred">Treat &amp; Train</span>
+            </div>
+            <a href="treat-and-train.html" class="coach-link">Learn about Treat &amp; Train →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section">
+    <div class="wrap">
+      <div class="join-inner">
+        <div class="join-content">
+          <span class="eyebrow">Are you a coach?</span>
+          <h2>Join the Collective</h2>
+          <div class="rule"></div>
+          <p>We're selectively growing the GZS Coaching Collective. If you're a serious coach in a complementary lane — PT, nutrition, performance, or strength — and you want access to a facility, a brand, and a referral network in Twin Falls, let's talk.</p>
+          <p style="color:rgba(255,255,255,0.35);font-size:13px;">Founding member spots available. Flat monthly contribution. Revenue share on GZS-referred clients.</p>
+          <a href="contact.html" class="btn btn-accent">Inquire about membership</a>
+        </div>
+        <div class="join-perks">
+          <div class="perk-row">
+            <div class="perk-num">01</div>
+            <div class="perk-text"><h4>Facility access</h4><p>Full use of the GZS training floor and equipment.</p></div>
+          </div>
+          <div class="perk-row">
+            <div class="perk-num">02</div>
+            <div class="perk-text"><h4>Brand umbrella</h4><p>Operate under the Starting Strength affiliate brand and GZS reputation.</p></div>
+          </div>
+          <div class="perk-row">
+            <div class="perk-num">03</div>
+            <div class="perk-text"><h4>Referral network</h4><p>Cross-referrals from Sam's email list, social following, and existing client base.</p></div>
+          </div>
+          <div class="perk-row">
+            <div class="perk-num">04</div>
+            <div class="perk-text"><h4>Stay independent</h4><p>Your clients, your rates, your practice. We just share a roof.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-g">
+      <div>
+        <a class="foot-logo" href="index.html">Ground <span>Zero</span> Strength</a>
+        <p class="foot-tag">Private barbell coaching in Twin Falls, Idaho. Starting Strength affiliate. In-person, hybrid, and online.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Coaching</h4>
+        <ul>
+          <li><a href="online-coaching.html">Online Coaching</a></li>
+          <li><a href="in-person.html">In-Person</a></li>
+          <li><a href="treat-and-train.html">Treat &amp; Train</a></li>
+          <li><a href="collective.html">The Collective</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://links.gzstrength.com" target="_blank">Free Guides</a></li>
+          <li><a href="https://x.com/gzstrength" target="_blank">X / Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p>© 2026 Ground Zero Strength. All rights reserved.</p>
+      <p>647 Filer Ave, Twin Falls, ID</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.07)' : 'none';
+});
+</script>
+</body>
+</html>
