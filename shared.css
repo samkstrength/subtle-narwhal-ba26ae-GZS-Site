@@ -72,7 +72,7 @@ p.lg { font-size: 17px; }
 
 /* FOOTER */
 footer { background: var(--off-black); color: rgba(255,255,255,0.7); padding: 60px 0 36px; border-top: 1px solid rgba(255,255,255,0.06); }
-.foot-g { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 44px; }
+.foot-g { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 44px; }
 .foot-logo { font-family: var(--display); font-size: 22px; letter-spacing: 0.06em; color: var(--white); margin-bottom: 14px; display: block; text-decoration: none; }
 .foot-logo span { color: var(--accent); }
 .foot-tag { font-size: 13px; line-height: 1.7; max-width: 260px; color: rgba(255,255,255,0.45); }

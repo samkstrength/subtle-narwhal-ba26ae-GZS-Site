@@ -56,10 +56,18 @@ function renderFooter(el) {
             <li><a href="https://x.com/gzstrength" target="_blank">X / Twitter</a></li>
           </ul>
         </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:2087318089">208-731-8089</a></li>
+            <li><span style="font-size:13px;color:rgba(255,255,255,0.48);">647 Filer Avenue 101</span></li>
+            <li><span style="font-size:13px;color:rgba(255,255,255,0.48);">Twin Falls, Idaho 83301</span></li>
+          </ul>
+        </div>
       </div>
       <div class="foot-bot">
         <p>© 2026 Ground Zero Strength. All rights reserved.</p>
-        <p>647 Filer Ave, Twin Falls, ID</p>
+        <p>647 Filer Avenue 101, Twin Falls, Idaho 83301 · 208-731-8089</p>
       </div>
     </div>
   `;
