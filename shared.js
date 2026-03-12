@@ -2,13 +2,13 @@
 if (window.location.pathname.endsWith('.html')) {
   window.history.replaceState(null, '', window.location.pathname.replace('.html', '') + window.location.search + window.location.hash);
 }
-
 // GZS shared nav, footer, mobile menu
 function renderNav(activePage) {
   const links = [
     { id: 'home', label: 'Home', href: 'index.html' },
     { id: 'online', label: 'Online Coaching', href: 'online-coaching.html' },
     { id: 'inperson', label: 'In-Person', href: 'in-person.html' },
+    { id: 'method', label: 'The GZS Method', href: 'method.html' },
     { id: 'nicole', label: 'Treat & Train', href: 'treat-and-train.html' },
     { id: 'ashley', label: "Women's Strength", href: 'ashley.html' },
     { id: 'collective', label: 'The Collective', href: 'collective.html' },
@@ -55,6 +55,7 @@ function renderFooter(el) {
         <div class="foot-col">
           <h4>Info</h4>
           <ul>
+            <li><a href="method.html">The GZS Method</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="https://links.gzstrength.com" target="_blank">Free Guides</a></li>
