@@ -10,6 +10,7 @@ function renderNav(activePage) {
     { id: 'online', label: 'Online Coaching', href: 'online-coaching.html' },
     { id: 'inperson', label: 'In-Person', href: 'in-person.html' },
     { id: 'nicole', label: 'Treat & Train', href: 'treat-and-train.html' },
+    { id: 'ashley', label: "Women's Strength", href: 'womens-strength.html' },
     { id: 'collective', label: 'The Collective', href: 'collective.html' },
     { id: 'about', label: 'About', href: 'about.html' },
     { id: 'contact', label: 'Contact', href: 'contact.html' },
