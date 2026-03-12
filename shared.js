@@ -58,7 +58,7 @@ function renderFooter(el) {
       </div>
       <div class="foot-bot">
         <p>© 2026 Ground Zero Strength. All rights reserved.</p>
-        <p>647 Filer Ave, Twin Falls, ID &nbsp;·&nbsp; (208) 731-8089</p>
+        <p>647 Filer Ave, Twin Falls, ID</p><a href="tel:+12087318089" style="font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--white);text-decoration:none;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:8px 16px;margin-top:8px;display:inline-block;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='var(--white)'">(208) 731-8089</a>
       </div>
     </div>
   `;
