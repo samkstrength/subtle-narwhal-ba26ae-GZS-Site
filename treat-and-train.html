@@ -42,9 +42,22 @@
 .nic-cta { background: var(--accent); padding: 80px 0; text-align: center; }
 .nic-cta h2 { color: var(--white); margin-bottom: 10px; }
 .nic-cta p { color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.nic-form { background: rgba(255,255,255,0.06); padding: 44px; border-top: 3px solid var(--accent); margin-top: 48px; }
+.nic-form h3 { color: var(--white); margin-bottom: 8px; font-size: 20px; }
+.nic-form p.form-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+.form-field { margin-bottom: 18px; }
+.form-field label { display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--mono); color: rgba(255,255,255,0.5); margin-bottom: 7px; }
+.form-field input,
+.form-field textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); color: var(--white); font-family: var(--sans); font-size: 15px; padding: 12px 14px; outline: none; box-sizing: border-box; transition: border-color 0.2s; }
+.form-field input:focus,
+.form-field textarea:focus { border-color: var(--accent); }
+.form-field textarea { resize: vertical; min-height: 120px; }
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: rgba(255,255,255,0.25); }
 @media (max-width: 900px) {
   .nic-hero { padding: 116px 0 60px; }
   .conds { grid-template-columns: 1fr 1fr; }
+  .nic-form { padding: 28px; }
 }
 @media (max-width: 580px) { .conds { grid-template-columns: 1fr; } }
 </style>
@@ -117,12 +130,34 @@
           <p>She works with clients who have movement issues, injury histories, or structural limitations that require more than a generic program. She brings both the clinical eye and the coaching skill to get you stronger, safely.</p>
           <div class="tags"><span class="tag">Licensed PT</span><span class="tag">Strength Coach</span><span class="tag">Movement Analysis</span><span class="tag">Twin Falls, ID</span></div>
         </div>
-        <div class="process-box">
-          <h3 style="margin-bottom:28px;font-size:22px;">What to expect</h3>
-          <div class="proc-item"><span class="proc-num">01</span><div><h4>Movement Assessment</h4><p>Nicole evaluates how you move, identifies limitations, and builds a clear picture of where to start.</p></div></div>
-          <div class="proc-item"><span class="proc-num">02</span><div><h4>Treatment Plan</h4><p>Targeted PT work to address the specific issues holding your training back.</p></div></div>
-          <div class="proc-item"><span class="proc-num">03</span><div><h4>Strength Programming</h4><p>A real program built around your limitations — not designed to avoid the bar, designed to get you on it.</p></div></div>
-          <div class="proc-item"><span class="proc-num">04</span><div><h4>Progress</h4><p>You get stronger. The limitation becomes less of a ceiling and more of a starting point.</p></div></div>
+        <div>
+          <div class="process-box">
+            <h3 style="margin-bottom:28px;font-size:22px;">What to expect</h3>
+            <div class="proc-item"><span class="proc-num">01</span><div><h4>Movement Assessment</h4><p>Nicole evaluates how you move, identifies limitations, and builds a clear picture of where to start.</p></div></div>
+            <div class="proc-item"><span class="proc-num">02</span><div><h4>Treatment Plan</h4><p>Targeted PT work to address the specific issues holding your training back.</p></div></div>
+            <div class="proc-item"><span class="proc-num">03</span><div><h4>Strength Programming</h4><p>A real program built around your limitations — not designed to avoid the bar, designed to get you on it.</p></div></div>
+            <div class="proc-item"><span class="proc-num">04</span><div><h4>Progress</h4><p>You get stronger. The limitation becomes less of a ceiling and more of a starting point.</p></div></div>
+          </div>
+          <div class="nic-form">
+            <h3>Work with Nicole</h3>
+            <p class="form-sub">Tell her what's going on and she'll be in touch.</p>
+            <form name="nicole-contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="nicole-contact">
+              <div class="form-field">
+                <label for="nic-name">Name</label>
+                <input type="text" id="nic-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-field">
+                <label for="nic-email">Email</label>
+                <input type="email" id="nic-email" name="email" placeholder="your@email.com" required>
+              </div>
+              <div class="form-field">
+                <label for="nic-msg">What's going on?</label>
+                <textarea id="nic-msg" name="message" placeholder="Describe your injury, limitation, or what's been holding your training back." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-accent" style="width:100%;">Send to Nicole</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
