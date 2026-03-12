@@ -1,3 +1,8 @@
+// Clean URLs — remove .html from address bar
+if (window.location.pathname.endsWith('.html')) {
+  window.history.replaceState(null, '', window.location.pathname.replace('.html', '') + window.location.search + window.location.hash);
+}
+
 // GZS shared nav, footer, mobile menu
 function renderNav(activePage) {
   const links = [
