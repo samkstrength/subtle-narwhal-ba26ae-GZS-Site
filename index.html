@@ -472,47 +472,15 @@ footer { background: var(--off-black); padding: 64px 0 36px; border-top: var(--b
   </div>
 </div>
 
-<!-- ══════ FOOTER ══════ -->
-<footer>
-  <div class="wrap">
-    <div class="foot-g">
-      <div>
-        <a class="foot-logo" href="index.html">Ground <span>Zero</span> Strength</a>
-        <p class="foot-tag">Private barbell coaching in Twin Falls, Idaho. Starting Strength affiliate. In-person, hybrid, and online.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Coaching</h4>
-        <ul>
-          <li><a href="online-coaching.html">Online Coaching</a></li>
-          <li><a href="in-person.html">In-Person</a></li>
-          <li><a href="in-person.html">Hybrid</a></li>
-          <li><a href="treat-and-train.html">Treat &amp; Train</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h4>Info</h4>
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://links.gzstrength.com" target="_blank">Free Guides</a></li>
-          <li><a href="https://x.com/gzstrength" target="_blank">X / Twitter</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bot">
-      <p>© 2026 Ground Zero Strength</p>
-      <p>647 Filer Ave, Twin Falls, ID</p>
-    </div>
-  </div>
-</footer>
+<footer id="mainFooter"></footer>
 
+<script src="shared.js"></script>
 <script>
+renderNav('home');
+renderFooter(document.getElementById('mainFooter'));
 function mobToggle() {
   document.getElementById('mobMenu').classList.toggle('open');
 }
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').style.borderBottomColor = window.scrollY > 10 ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.07)';
-});
 </script>
 </body>
 </html>
