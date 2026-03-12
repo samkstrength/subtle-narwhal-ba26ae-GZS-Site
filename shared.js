@@ -28,7 +28,6 @@ function renderNav(activePage) {
     document.getElementById('mainNav').style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.07)' : 'none';
   });
 }
-
 function renderFooter(el) {
   el.innerHTML = `
     <div class="wrap">
@@ -59,7 +58,7 @@ function renderFooter(el) {
       </div>
       <div class="foot-bot">
         <p>© 2026 Ground Zero Strength. All rights reserved.</p>
-        <p>647 Filer Ave, Twin Falls, ID</p>
+        <p>647 Filer Ave, Twin Falls, ID &nbsp;·&nbsp; (208) 731-8089</p>
       </div>
     </div>
   `;
